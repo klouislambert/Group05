@@ -1,0 +1,301 @@
+StudentID,Department,StudentLevel
+STU-2021-001,Computer Science,Undergraduate
+STU-2022-002,Computer Science,Undergraduate
+STU-2021-003,Business,Undergraduate
+STU-2021-004,Computer Science,Undergraduate
+STU-2021-005,Business,Undergraduate
+STU-2024-006,Computer Science,Undergraduate
+STU-2021-007,Medicine,Undergraduate
+STU-2024-008,Engineering,Undergraduate
+STU-2023-009,Computer Science,Undergraduate
+STU-2023-010,Education,Undergraduate
+STU-2021-011,Medicine,Undergraduate
+STU-2024-012,Computer Science,Undergraduate
+STU-2023-013,Business,Undergraduate
+STU-2021-014,Medicine,Graduate
+STU-2021-015,Education,Graduate
+STU-2024-016,Engineering,Undergraduate
+STU-2023-017,Computer Science,Undergraduate
+STU-2023-018,Medicine,Undergraduate
+STU-2021-019,Business,Undergraduate
+STU-2022-020,Computer Science,Undergraduate
+STU-2022-021,Medicine,Graduate
+STU-2021-022,Computer Science,Undergraduate
+STU-2023-023,Engineering,Undergraduate
+STU-2023-024,Computer Science,Undergraduate
+STU-2024-025,Computer Science,Undergraduate
+STU-2023-026,Medicine,Undergraduate
+STU-2024-027,Engineering,Graduate
+STU-2022-028,Business,Undergraduate
+STU-2021-029,Education,Undergraduate
+STU-2022-030,Education,Undergraduate
+STU-2021-031,Engineering,Undergraduate
+STU-2024-032,Business,Graduate
+STU-2021-033,Medicine,Undergraduate
+STU-2023-034,Medicine,Undergraduate
+STU-2023-035,Engineering,Undergraduate
+STU-2023-036,Arts,Graduate
+STU-2021-037,Law,Undergraduate
+STU-2022-038,Computer Science,Graduate
+STU-2021-039,Business,Undergraduate
+STU-2021-040,Law,Graduate
+STU-2023-041,Computer Science,Undergraduate
+STU-2021-042,Computer Science,Undergraduate
+STU-2021-043,Arts,Undergraduate
+STU-2022-044,Computer Science,Undergraduate
+STU-2022-045,Engineering,Graduate
+STU-2024-046,Arts,Graduate
+STU-2022-047,Medicine,Undergraduate
+STU-2023-048,Engineering,Undergraduate
+STU-2021-049,Computer Science,Undergraduate
+STU-2021-050,Business,Undergraduate
+STU-2022-051,Computer Science,Undergraduate
+STU-2021-052,Computer Science,Graduate
+STU-2023-053,Computer Science,Undergraduate
+STU-2024-054,Computer Science,Undergraduate
+STU-2024-055,Computer Science,Undergraduate
+STU-2024-056,Computer Science,Undergraduate
+STU-2024-057,Engineering,Undergraduate
+STU-2021-058,Medicine,Graduate
+STU-2021-059,Computer Science,Undergraduate
+STU-2021-060,Computer Science,Undergraduate
+STU-2024-061,Computer Science,Undergraduate
+STU-2024-062,Computer Science,Graduate
+STU-2024-063,Education,Graduate
+STU-2021-064,Computer Science,Graduate
+STU-2021-065,Arts,Graduate
+STU-2022-066,Computer Science,Undergraduate
+STU-2022-067,Education,Graduate
+STU-2022-068,Engineering,Graduate
+STU-2023-069,Law,Graduate
+STU-2023-070,Engineering,Graduate
+STU-2024-071,Computer Science,Undergraduate
+STU-2021-072,Business,Undergraduate
+STU-2023-073,Computer Science,Undergraduate
+STU-2022-074,Computer Science,Undergraduate
+STU-2022-075,Computer Science,Undergraduate
+STU-2022-076,Engineering,Graduate
+STU-2022-077,Business,Undergraduate
+STU-2021-078,Engineering,Undergraduate
+STU-2023-079,Law,Undergraduate
+STU-2023-080,Computer Science,Undergraduate
+STU-2023-081,Engineering,Graduate
+STU-2021-082,Computer Science,Undergraduate
+STU-2021-083,Computer Science,Undergraduate
+STU-2023-084,Computer Science,Undergraduate
+STU-2021-085,Law,Undergraduate
+STU-2022-086,Engineering,Undergraduate
+STU-2023-087,Business,Graduate
+STU-2021-088,Medicine,Undergraduate
+STU-2021-089,Law,Undergraduate
+STU-2021-090,Law,Undergraduate
+STU-2022-091,Engineering,Undergraduate
+STU-2023-092,Computer Science,Undergraduate
+STU-2023-093,Business,Undergraduate
+STU-2021-094,Computer Science,Undergraduate
+STU-2023-095,Computer Science,Undergraduate
+STU-2022-096,Business,Undergraduate
+STU-2024-097,Business,Undergraduate
+STU-2021-098,Computer Science,Graduate
+STU-2022-099,Business,Graduate
+STU-2022-100,Engineering,Undergraduate
+STU-2023-101,Law,Graduate
+STU-2021-102,Law,Undergraduate
+STU-2022-103,Medicine,Undergraduate
+STU-2024-104,Arts,Undergraduate
+STU-2022-105,Education,Graduate
+STU-2022-106,Law,Undergraduate
+STU-2023-107,Education,Undergraduate
+STU-2022-108,Engineering,Graduate
+STU-2021-109,Engineering,Undergraduate
+STU-2024-110,Computer Science,Graduate
+STU-2024-111,Engineering,Graduate
+STU-2022-112,Computer Science,Undergraduate
+STU-2024-113,Engineering,Graduate
+STU-2023-114,Engineering,Undergraduate
+STU-2023-115,Law,Undergraduate
+STU-2023-116,Computer Science,Graduate
+STU-2023-117,Computer Science,Undergraduate
+STU-2023-118,Medicine,Undergraduate
+STU-2021-119,Engineering,Undergraduate
+STU-2023-120,Computer Science,Undergraduate
+STU-2022-121,Engineering,Undergraduate
+STU-2023-122,Business,Undergraduate
+STU-2021-123,Medicine,Undergraduate
+STU-2023-124,Medicine,Undergraduate
+STU-2023-125,Business,Undergraduate
+STU-2024-126,Medicine,Graduate
+STU-2023-127,Engineering,Graduate
+STU-2023-128,Engineering,Undergraduate
+STU-2023-129,Engineering,Undergraduate
+STU-2022-130,Business,Graduate
+STU-2022-131,Medicine,Undergraduate
+STU-2023-132,Computer Science,Graduate
+STU-2022-133,Medicine,Undergraduate
+STU-2022-134,Computer Science,Undergraduate
+STU-2024-135,Business,Graduate
+STU-2024-136,Engineering,Undergraduate
+STU-2022-137,Medicine,Undergraduate
+STU-2024-138,Computer Science,Undergraduate
+STU-2021-139,Law,Graduate
+STU-2021-140,Education,Undergraduate
+STU-2024-141,Computer Science,Undergraduate
+STU-2021-142,Engineering,Graduate
+STU-2023-143,Arts,Graduate
+STU-2024-144,Education,Undergraduate
+STU-2022-145,Medicine,Undergraduate
+STU-2023-146,Medicine,Graduate
+STU-2023-147,Medicine,Undergraduate
+STU-2022-148,Engineering,Undergraduate
+STU-2023-149,Computer Science,Undergraduate
+STU-2021-150,Computer Science,Undergraduate
+STU-2022-151,Medicine,Undergraduate
+STU-2024-152,Engineering,Undergraduate
+STU-2021-153,Computer Science,Undergraduate
+STU-2021-154,Education,Graduate
+STU-2024-155,Business,Graduate
+STU-2023-156,Medicine,Graduate
+STU-2024-157,Business,Undergraduate
+STU-2022-158,Business,Undergraduate
+STU-2024-159,Computer Science,Undergraduate
+STU-2024-160,Medicine,Graduate
+STU-2022-161,Arts,Undergraduate
+STU-2024-162,Business,Undergraduate
+STU-2021-163,Business,Undergraduate
+STU-2024-164,Computer Science,Undergraduate
+STU-2023-165,Computer Science,Undergraduate
+STU-2024-166,Engineering,Graduate
+STU-2024-167,Engineering,Undergraduate
+STU-2021-168,Medicine,Undergraduate
+STU-2023-169,Computer Science,Undergraduate
+STU-2021-170,Medicine,Graduate
+STU-2022-171,Education,Undergraduate
+STU-2022-172,Computer Science,Undergraduate
+STU-2022-173,Engineering,Undergraduate
+STU-2023-174,Computer Science,Undergraduate
+STU-2021-175,Education,Undergraduate
+STU-2023-176,Computer Science,Undergraduate
+STU-2023-177,Business,Graduate
+STU-2024-178,Engineering,Undergraduate
+STU-2021-179,Business,Graduate
+STU-2022-180,Computer Science,Graduate
+STU-2021-181,Education,Undergraduate
+STU-2021-182,Engineering,Undergraduate
+STU-2023-183,Computer Science,Undergraduate
+STU-2021-184,Education,Graduate
+STU-2021-185,Engineering,Undergraduate
+STU-2024-186,Medicine,Undergraduate
+STU-2023-187,Business,Graduate
+STU-2024-188,Engineering,Graduate
+STU-2023-189,Engineering,Undergraduate
+STU-2021-190,Engineering,Undergraduate
+STU-2024-191,Business,Undergraduate
+STU-2023-192,Computer Science,Graduate
+STU-2022-193,Business,Undergraduate
+STU-2023-194,Engineering,Graduate
+STU-2023-195,Business,Undergraduate
+STU-2022-196,Computer Science,Undergraduate
+STU-2024-197,Business,Undergraduate
+STU-2024-198,Business,Undergraduate
+STU-2021-199,Computer Science,Undergraduate
+STU-2022-200,Engineering,Undergraduate
+STU-2024-201,Business,Undergraduate
+STU-2023-202,Engineering,Undergraduate
+STU-2023-203,Engineering,Undergraduate
+STU-2022-204,Engineering,Undergraduate
+STU-2022-205,Computer Science,Undergraduate
+STU-2023-206,Medicine,Graduate
+STU-2023-207,Arts,Graduate
+STU-2023-208,Computer Science,Undergraduate
+STU-2021-209,Medicine,Undergraduate
+STU-2021-210,Arts,Undergraduate
+STU-2022-211,Business,Graduate
+STU-2021-212,Law,Undergraduate
+STU-2024-213,Business,Undergraduate
+STU-2021-214,Engineering,Graduate
+STU-2021-215,Education,Undergraduate
+STU-2021-216,Business,Undergraduate
+STU-2022-217,Computer Science,Undergraduate
+STU-2023-218,Computer Science,Undergraduate
+STU-2024-219,Business,Graduate
+STU-2022-220,Education,Undergraduate
+STU-2024-221,Engineering,Undergraduate
+STU-2024-222,Engineering,Undergraduate
+STU-2021-223,Arts,Undergraduate
+STU-2022-224,Engineering,Undergraduate
+STU-2022-225,Computer Science,Undergraduate
+STU-2021-226,Engineering,Undergraduate
+STU-2024-227,Engineering,Undergraduate
+STU-2023-228,Medicine,Undergraduate
+STU-2022-229,Law,Graduate
+STU-2022-230,Engineering,Undergraduate
+STU-2022-231,Law,Graduate
+STU-2021-232,Computer Science,Graduate
+STU-2023-233,Engineering,Undergraduate
+STU-2023-234,Medicine,Graduate
+STU-2024-235,Engineering,Undergraduate
+STU-2024-236,Medicine,Undergraduate
+STU-2021-237,Computer Science,Graduate
+STU-2021-238,Arts,Undergraduate
+STU-2023-239,Business,Graduate
+STU-2022-240,Business,Undergraduate
+STU-2023-241,Computer Science,Undergraduate
+STU-2024-242,Arts,Undergraduate
+STU-2024-243,Engineering,Undergraduate
+STU-2022-244,Engineering,Undergraduate
+STU-2023-245,Medicine,Undergraduate
+STU-2021-246,Engineering,Undergraduate
+STU-2023-247,Computer Science,Graduate
+STU-2021-248,Medicine,Undergraduate
+STU-2024-249,Computer Science,Undergraduate
+STU-2024-250,Business,Graduate
+STU-2022-251,Engineering,Undergraduate
+STU-2023-252,Engineering,Undergraduate
+STU-2021-253,Computer Science,Undergraduate
+STU-2022-254,Medicine,Undergraduate
+STU-2021-255,Business,Undergraduate
+STU-2021-256,Engineering,Undergraduate
+STU-2022-257,Business,Undergraduate
+STU-2023-258,Engineering,Undergraduate
+STU-2024-259,Computer Science,Undergraduate
+STU-2024-260,Computer Science,Undergraduate
+STU-2022-261,Education,Undergraduate
+STU-2024-262,Engineering,Graduate
+STU-2023-263,Education,Undergraduate
+STU-2023-264,Education,Undergraduate
+STU-2024-265,Education,Undergraduate
+STU-2024-266,Engineering,Undergraduate
+STU-2024-267,Engineering,Undergraduate
+STU-2022-268,Arts,Undergraduate
+STU-2024-269,Computer Science,Graduate
+STU-2021-270,Engineering,Undergraduate
+STU-2024-271,Engineering,Undergraduate
+STU-2022-272,Business,Undergraduate
+STU-2023-273,Education,Graduate
+STU-2024-274,Computer Science,Graduate
+STU-2021-275,Medicine,Undergraduate
+STU-2022-276,Computer Science,Graduate
+STU-2023-277,Engineering,Undergraduate
+STU-2021-278,Education,Graduate
+STU-2024-279,Arts,Undergraduate
+STU-2024-280,Law,Undergraduate
+STU-2021-281,Computer Science,Undergraduate
+STU-2023-282,Arts,Undergraduate
+STU-2024-283,Arts,Graduate
+STU-2021-284,Engineering,Undergraduate
+STU-2021-285,Computer Science,Graduate
+STU-2023-286,Engineering,Undergraduate
+STU-2022-287,Business,Undergraduate
+STU-2022-288,Computer Science,Undergraduate
+STU-2024-289,Business,Undergraduate
+STU-2022-290,Computer Science,Undergraduate
+STU-2024-291,Engineering,Undergraduate
+STU-2024-292,Law,Undergraduate
+STU-2022-293,Computer Science,Graduate
+STU-2023-294,Business,Undergraduate
+STU-2023-295,Engineering,Undergraduate
+STU-2024-296,Education,Undergraduate
+STU-2024-297,Business,Undergraduate
+STU-2023-298,Computer Science,Graduate
+STU-2024-299,Engineering,Undergraduate
+STU-2021-300,Law,Undergraduate

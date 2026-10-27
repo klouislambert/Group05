@@ -1,0 +1,54 @@
+ETL ERROR LOG (sample) - generated 2026-10-27 23:01:45
+timestamp | rule | source | record | detail | action
+------------------------------------------------------------------------------------------
+2026-10-27 23:01:45 | B5_DUPLICATE_ROW | book | 1127 | identical row repeated | dropped, first copy kept
+2026-10-27 23:01:45 | B5_DUPLICATE_ROW | book | 2786 | identical row repeated | dropped, first copy kept
+2026-10-27 23:01:45 | B5_DUPLICATE_ROW | book | 1029 | identical row repeated | dropped, first copy kept
+2026-10-27 23:01:45 | B5_DUPLICATE_ROW | book | 3088 | identical row repeated | dropped, first copy kept
+2026-10-27 23:01:45 | B5_DUPLICATE_ROW | book | 3021 | identical row repeated | dropped, first copy kept
+2026-10-27 23:01:45 | B2_MISSING_DEPARTMENT | book | 1210 | student STU-2023-013 | filled from student master
+2026-10-27 23:01:45 | B2_MISSING_DEPARTMENT | book | 1351 | student STU-2022-133 | filled from student master
+2026-10-27 23:01:45 | B2_MISSING_DEPARTMENT | book | 3172 | student STU-2021-184 | filled from student master
+2026-10-27 23:01:45 | B2_MISSING_DEPARTMENT | book | 3213 | student STU-2024-111 | filled from student master
+2026-10-27 23:01:45 | B2_MISSING_DEPARTMENT | book | 2973 | student STU-2022-230 | filled from student master
+2026-10-27 23:01:45 | B3_DATE_FORMAT | book | 3038 | CheckoutDate 01/04/2024 | converted to YYYY-MM-DD
+2026-10-27 23:01:45 | B3_DATE_FORMAT | book | 2012 | CheckoutDate 19/12/2024 | converted to YYYY-MM-DD
+2026-10-27 23:01:45 | B3_DATE_FORMAT | book | 2796 | CheckoutDate 04/02/2025 | converted to YYYY-MM-DD
+2026-10-27 23:01:45 | B3_DATE_FORMAT | book | 2702 | CheckoutDate 20/05/2024 | converted to YYYY-MM-DD
+2026-10-27 23:01:45 | B3_DATE_FORMAT | book | 2375 | CheckoutDate 13/04/2024 | converted to YYYY-MM-DD
+2026-10-27 23:01:45 | B4_NOT_RETURNED | book | 1558 | ReturnDate empty | kept as NULL, flagged not returned
+2026-10-27 23:01:45 | B4_NOT_RETURNED | book | 3038 | ReturnDate empty | kept as NULL, flagged not returned
+2026-10-27 23:01:45 | B4_NOT_RETURNED | book | 1896 | ReturnDate empty | kept as NULL, flagged not returned
+2026-10-27 23:01:45 | B4_NOT_RETURNED | book | 3103 | ReturnDate empty | kept as NULL, flagged not returned
+2026-10-27 23:01:45 | B4_NOT_RETURNED | book | 2071 | ReturnDate empty | kept as NULL, flagged not returned
+2026-10-27 23:01:45 | D4_COMMA_IN_COUNT | digital | 12/23/2024 | DownloadCount 1,200 | comma removed, converted to integer
+2026-10-27 23:01:45 | D4_COMMA_IN_COUNT | digital | 02/12/2025 | DownloadCount 1,200 | comma removed, converted to integer
+2026-10-27 23:01:45 | D4_COMMA_IN_COUNT | digital | 07/16/2024 | DownloadCount 1,200 | comma removed, converted to integer
+2026-10-27 23:01:45 | D4_COMMA_IN_COUNT | digital | 04/19/2025 | DownloadCount 1,200 | comma removed, converted to integer
+2026-10-27 23:01:45 | D4_COMMA_IN_COUNT | digital | 03/30/2025 | DownloadCount 1,200 | comma removed, converted to integer
+2026-10-27 23:01:45 | D5_MISSING_DURATION | digital | 01/29/2024 | Duration_Minutes empty | kept as NULL, no invented value
+2026-10-27 23:01:45 | D5_MISSING_DURATION | digital | 09/28/2024 | Duration_Minutes empty | kept as NULL, no invented value
+2026-10-27 23:01:45 | D5_MISSING_DURATION | digital | 03/16/2024 | Duration_Minutes empty | kept as NULL, no invented value
+2026-10-27 23:01:45 | D5_MISSING_DURATION | digital | 12/03/2024 | Duration_Minutes empty | kept as NULL, no invented value
+2026-10-27 23:01:45 | D5_MISSING_DURATION | digital | 04/12/2024 | Duration_Minutes empty | kept as NULL, no invented value
+2026-10-27 23:01:45 | R4_DUPLICATE_ROW | room | 6397 | identical row repeated | dropped, first copy kept
+2026-10-27 23:01:45 | R4_DUPLICATE_ROW | room | 5261 | identical row repeated | dropped, first copy kept
+2026-10-27 23:01:45 | R4_DUPLICATE_ROW | room | 6495 | identical row repeated | dropped, first copy kept
+2026-10-27 23:01:45 | R4_DUPLICATE_ROW | room | 6073 | identical row repeated | dropped, first copy kept
+2026-10-27 23:01:45 | R4_DUPLICATE_ROW | room | 6439 | identical row repeated | dropped, first copy kept
+2026-10-27 23:01:45 | R5_WALK_IN | room | 5909 | no StudentID | kept, linked to Unknown student
+2026-10-27 23:01:45 | R5_WALK_IN | room | 6126 | no StudentID | kept, linked to Unknown student
+2026-10-27 23:01:45 | R5_WALK_IN | room | 6360 | no StudentID | kept, linked to Unknown student
+2026-10-27 23:01:45 | R5_WALK_IN | room | 5999 | no StudentID | kept, linked to Unknown student
+2026-10-27 23:01:45 | R5_WALK_IN | room | 5151 | no StudentID | kept, linked to Unknown student
+
+TOTALS PER RULE (all records, not only the samples above)
+------------------------------------------------------------------------------------------
+B5_DUPLICATE_ROW              25
+B2_MISSING_DEPARTMENT        106
+B3_DATE_FORMAT               872
+B4_NOT_RETURNED              487
+D4_COMMA_IN_COUNT             20
+D5_MISSING_DURATION          500
+R4_DUPLICATE_ROW              40
+R5_WALK_IN                   126
