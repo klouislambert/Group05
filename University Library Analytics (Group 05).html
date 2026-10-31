@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>University Library Analytics | Group 05</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f6f4;--card:#fff;--ink:#12263a;--mute:#5b6b7a;--line:#d5e0dc;--a:#0e7c7b;--b:#e09f3e;--c:#3a5a8c;--heat0:#e9f3f1;--heat1:#0e7c7b;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a24;--card:#16263a;--ink:#e8eff5;--mute:#9bb0c3;--line:#26394f;--a:#3cc4bd;--b:#f0b45c;--c:#7ea6e0;--heat0:#16263a;--heat1:#3cc4bd;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1a24;--card:#16263a;--ink:#e8eff5;--mute:#9bb0c3;--line:#26394f;--a:#3cc4bd;--b:#f0b45c;--c:#7ea6e0;--heat0:#16263a;--heat1:#3cc4bd;color-scheme:dark}
+html,body{height:auto}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Source Sans 3",system-ui,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:28px 18px 60px}
+h1{font:700 clamp(26px,5vw,40px)/1.15 "Source Serif 4",Georgia,serif;margin:0 0 6px}
+h2{font:600 20px/1.3 "Source Serif 4",Georgia,serif;margin:0 0 4px}
+.sub{color:var(--mute);margin:0 0 20px;max-width:62ch}
+nav{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:22px;flex-wrap:wrap}
+nav button{background:none;border:0;border-bottom:3px solid transparent;color:var(--mute);font:600 16px "Source Sans 3",sans-serif;padding:10px 14px;cursor:pointer}
+nav button[aria-selected=true]{color:var(--ink);border-color:var(--a)}
+button:focus-visible,select:focus-visible{outline:3px solid var(--b);outline-offset:2px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:20px}
+.kpi{border-left:4px solid var(--a);padding:2px 0 2px 12px}.kpi b{display:block;font:700 30px/1.1 "Source Serif 4",serif}.kpi span{color:var(--mute);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:16px}
+.card p{color:var(--mute);font-size:14px;margin:0 0 10px}
+.box{position:relative;height:270px}
+select{font:600 16px "Source Sans 3",sans-serif;padding:8px 10px;border:1px solid var(--line);border-radius:4px;background:var(--card);color:var(--ink);margin-bottom:16px}
+.heat{width:100%;border-collapse:collapse;text-align:center}.heat th{font-weight:600;color:var(--mute);font-size:14px;padding:6px}.heat td{padding:14px 6px;font-weight:600;border:2px solid var(--card)}.heat th:first-child{text-align:left}
+.wrap{overflow-x:auto}
+section[hidden]{display:none}
+footer{margin-top:34px;color:var(--mute);font-size:13px;max-width:70ch}
+</style></head><body><main>
+<h1>University Library Analytics</h1>
+<p class="sub">How students and staff use books, digital resources and study rooms, January 2024 to June 2025. Built from the Group 05 data warehouse.</p>
+<nav role="tablist" aria-label="Dashboards">
+<button role="tab" data-t="executive" aria-selected="true">Executive</button>
+<button role="tab" data-t="department" aria-selected="false">Department</button>
+<button role="tab" data-t="operational" aria-selected="false">Study rooms</button></nav>
+
+<section id="executive">
+<div class="kpis"><div class="kpi"><b id="k1"></b><span>book loans</span></div><div class="kpi"><b id="k2"></b><span>digital downloads</span></div><div class="kpi"><b id="k3"></b><span>room bookings</span></div><div class="kpi"><b>483</b><span>books not yet returned</span></div></div>
+<div class="grid">
+<div class="card"><h2>Digital downloads per month</h2><p>Downloads swing widely; there is no steady growth.</p><div class="box"><canvas id="cDown" role="img" aria-label="Line chart of monthly downloads"></canvas></div></div>
+<div class="card"><h2>Loans and room bookings per month</h2><p>Loans stay between about 150 and 190 a month.</p><div class="box"><canvas id="cLoan" role="img" aria-label="Line chart of monthly loans and bookings"></canvas></div></div>
+<div class="card"><h2>Departments by total activity</h2><p>Loans, downloads and bookings added together, for ranking only.</p><div class="box"><canvas id="cRank" role="img" aria-label="Bar chart ranking departments"></canvas></div></div>
+<div class="card"><h2>Book loans per quarter, 2024</h2><p>The second quarter is the busiest.</p><div class="box"><canvas id="cQ" role="img" aria-label="Column chart of loans per quarter"></canvas></div></div>
+</div></section>
+
+<section id="department" hidden>
+<label for="sel"><b>Choose a department</b></label><br><select id="sel"></select>
+<div class="kpis"><div class="kpi"><b id="d1"></b><span>book loans</span></div><div class="kpi"><b id="d2"></b><span>digital downloads</span></div><div class="kpi"><b id="d3"></b><span>room bookings</span></div><div class="kpi"><b id="d4"></b><span>average loan, days</span></div></div>
+<div class="grid">
+<div class="card"><h2>What this department uses</h2><p>Books borrowed and downloads by type.</p><div class="box"><canvas id="cRes" role="img" aria-label="Bar chart of resource use for the selected department"></canvas></div></div>
+<div class="card"><h2>Average loan length by department</h2><p>Days between borrowing and returning. The chosen department is highlighted.</p><div class="box"><canvas id="cAvg" role="img" aria-label="Bar chart of average loan days"></canvas></div></div>
+<div class="card"><h2>Undergraduate and graduate loans</h2><p>Across the whole library.</p><div class="box"><canvas id="cLvl" role="img" aria-label="Doughnut chart of loans by student level"></canvas></div></div>
+</div></section>
+
+<section id="operational" hidden>
+<div class="kpis"><div class="kpi"><b>Tuesday afternoon</b><span>busiest slot, 102 bookings</span></div><div class="kpi"><b>R101</b><span>most used room, 285 bookings</span></div><div class="kpi"><b>2.28 h</b><span>average booking length</span></div></div>
+<div class="card" style="margin-bottom:16px"><h2>When the study rooms are busiest</h2><p>Bookings by weekday and time block. Darker means busier.</p><div class="wrap"><table class="heat" id="heat"></table></div></div>
+<div class="grid">
+<div class="card"><h2>Bookings per room</h2><p>R101 to R103 take half of all bookings.</p><div class="box"><canvas id="cRoom" role="img" aria-label="Column chart of bookings per room"></canvas></div></div>
+<div class="card"><h2>Why rooms are booked</h2><p>Share of bookings by purpose.</p><div class="box"><canvas id="cPur" role="img" aria-label="Doughnut chart of booking purpose"></canvas></div></div>
+</div></section>
+<footer>Group 05: KUBWAYO Louis Lambert, UWANYIRIGIRA Janviere, NIZEYIMANA Elie. HAIP, Data Mining and Data Warehousing, FA1. The data are sample data generated for the project. No student identifiers appear on this page.</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+<script>
+const D={"months": ["2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06"], "loans": [172, 156, 177, 180, 187, 165, 150, 155, 148, 181, 155, 151, 172, 169, 182, 146, 166, 188], "downloads": [2983, 4413, 2187, 1195, 3647, 2026, 3184, 5217, 989, 990, 1601, 3072, 997, 3941, 4025, 2468, 3455, 1726], "bookings": [87, 71, 78, 84, 76, 103, 73, 79, 74, 87, 80, 92, 82, 76, 79, 93, 89, 97], "dept": [{"n": "Engineering", "l": 707, "d": 13907, "b": 330, "a": 23.9}, {"n": "Business", "l": 430, "d": 9869, "b": 221, "a": 24.4}, {"n": "Computer Science", "l": 924, "d": 8414, "b": 389, "a": 24.3}, {"n": "Education", "l": 218, "d": 5383, "b": 123, "a": 24.1}, {"n": "Medicine", "l": 359, "d": 4089, "b": 174, "a": 23.0}, {"n": "Arts", "l": 180, "d": 3716, "b": 71, "a": 24.4}, {"n": "Law", "l": 182, "d": 2738, "b": 71, "a": 23.2}], "resCols": ["books_borrowed", "ebook_downloads", "journal_downloads", "article_downloads"], "res": {"Arts": [180, 471, 2886, 359], "Business": [430, 3763, 1496, 4610], "Computer Science": [924, 3146, 2372, 2896], "Education": [218, 1075, 1020, 3288], "Engineering": [707, 7734, 4121, 2052], "Law": [182, 831, 1779, 128], "Medicine": [359, 961, 1164, 1964]}, "level": {"Graduate": 771, "Undergraduate": 2229}, "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "heat": [[94, 84, 33], [73, 102, 40], [96, 78, 38], [79, 92, 35], [92, 80, 40], [88, 90, 44], [90, 94, 38]], "rooms": [["R101", 285], ["R102", 233], ["R103", 233], ["R104", 177], ["R105", 168], ["R107", 120], ["R106", 102], ["R108", 85], ["R109", 53], ["R110", 44]], "purpose": [["Group Project", 613], ["Meeting", 217], ["Study", 670]], "q6": [[1, 505], [2, 532], [3, 453], [4, 487]]};
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const fmt=n=>n.toLocaleString('en-US');
+let charts={};
+function mk(id,cfg){if(charts[id])charts[id].destroy();const ink=css('--mute'),line=css('--line');
+ cfg.options=Object.assign({responsive:true,maintainAspectRatio:false,animation:false},cfg.options||{});
+ const sc=cfg.options.scales;if(sc)for(const k in sc){sc[k].ticks=Object.assign({color:ink},sc[k].ticks||{});sc[k].grid=Object.assign({color:line},sc[k].grid||{})}
+ cfg.options.plugins=Object.assign({legend:{labels:{color:ink}}},cfg.options.plugins||{});
+ charts[id]=new Chart(document.getElementById(id),cfg)}
+const sum=a=>a.reduce((x,y)=>x+y,0);
+function renderExec(){const a=css('--a'),b=css('--b'),c=css('--c');
+ k1.textContent=fmt(sum(D.loans));k2.textContent=fmt(sum(D.downloads));k3.textContent=fmt(sum(D.bookings));
+ mk('cDown',{type:'line',data:{labels:D.months,datasets:[{label:'Downloads',data:D.downloads,borderColor:a,backgroundColor:a,tension:0,pointRadius:2}]},options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
+ mk('cLoan',{type:'line',data:{labels:D.months,datasets:[{label:'Loans',data:D.loans,borderColor:c,backgroundColor:c,pointRadius:2},{label:'Room bookings',data:D.bookings,borderColor:b,backgroundColor:b,pointRadius:2}]},options:{scales:{y:{beginAtZero:true}}}});
+ const r=[...D.dept].sort((x,y)=>(y.l+y.d+y.b)-(x.l+x.d+x.b));
+ mk('cRank',{type:'bar',data:{labels:r.map(x=>x.n),datasets:[{data:r.map(x=>x.l+x.d+x.b),backgroundColor:a}]},options:{indexAxis:'y',plugins:{legend:{display:false}}}});
+ mk('cQ',{type:'bar',data:{labels:D.q6.map(x=>'Q'+x[0]),datasets:[{data:D.q6.map(x=>x[1]),backgroundColor:c}]},options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}})}
+function renderDept(){const a=css('--a'),b=css('--b'),c=css('--c'),n=sel.value,x=D.dept.find(z=>z.n===n);
+ d1.textContent=fmt(x.l);d2.textContent=fmt(x.d);d3.textContent=fmt(x.b);d4.textContent=x.a;
+ mk('cRes',{type:'bar',data:{labels:['Books borrowed','E-books','Journals','Articles'],datasets:[{data:D.res[n],backgroundColor:[c,a,a,a]}]},options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
+ mk('cAvg',{type:'bar',data:{labels:D.dept.map(z=>z.n),datasets:[{data:D.dept.map(z=>z.a),backgroundColor:D.dept.map(z=>z.n===n?b:a)}]},options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
+ mk('cLvl',{type:'doughnut',data:{labels:Object.keys(D.level),datasets:[{data:Object.values(D.level),backgroundColor:[b,a],borderWidth:0}]},options:{plugins:{legend:{position:'bottom'}}}})}
+function renderOps(){const a=css('--a'),b=css('--b'),c=css('--c');
+ const all=D.heat.flat(),mx=Math.max(...all),mn=Math.min(...all);
+ const h0=css('--heat0'),h1=css('--heat1');
+ let t='<tr><th>Day</th><th>Morning</th><th>Afternoon</th><th>Evening</th></tr>';
+ D.heat.forEach((row,i)=>{t+='<tr><th>'+D.days[i]+'</th>'+row.map(v=>{const p=Math.round(100*(v-mn)/(mx-mn));return `<td style="background:color-mix(in srgb,${h1} ${p}%,${h0});color:${p>55?'#fff':'var(--ink)'}">${v}</td>`}).join('')+'</tr>'});
+ heat.innerHTML=t;
+ mk('cRoom',{type:'bar',data:{labels:D.rooms.map(x=>x[0]),datasets:[{data:D.rooms.map(x=>x[1]),backgroundColor:a}]},options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
+ mk('cPur',{type:'doughnut',data:{labels:D.purpose.map(x=>x[0]),datasets:[{data:D.purpose.map(x=>x[1]),backgroundColor:[c,b,a],borderWidth:0}]},options:{plugins:{legend:{position:'bottom'}}}})}
+D.dept.slice().sort((x,y)=>x.n.localeCompare(y.n)).forEach(x=>{const o=document.createElement('option');o.textContent=x.n;sel.appendChild(o)});sel.value='Engineering';
+const R={executive:renderExec,department:renderDept,operational:renderOps};
+function show(t){if(!R[t])t='executive';document.querySelectorAll('section').forEach(s=>s.hidden=s.id!==t);
+ document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.t===t));R[t]()}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{location.hash=b.dataset.t});
+sel.onchange=renderDept;
+addEventListener('hashchange',()=>show(location.hash.slice(1)));
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>show(location.hash.slice(1)));
+show(location.hash.slice(1));
+</script></body></html>
